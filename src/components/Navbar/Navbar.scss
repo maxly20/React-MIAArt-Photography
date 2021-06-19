@@ -1,0 +1,43 @@
+.navbar {
+  width: 100vw;
+  height: 15vh;
+  padding: 0 2rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 12vh;
+}
+.nav-links {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  li {
+    list-style: none;
+  }
+  a:link,
+  a:visited {
+    text-decoration: none;
+    // color: white;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  a:hover {
+    color: rgb(221, 221, 221);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    width: 95%;
+    margin-top: 1rem;
+    a {
+      font-size: 1rem;
+    }
+  }
+}
