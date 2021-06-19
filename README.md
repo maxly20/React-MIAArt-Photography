@@ -1,13 +1,10 @@
 # MIAArt Photography
 
-A photography website built with React, react-image-lightbox
- and Sass
+A photography website built with React, react-image-lightbox and Sass
 
 Will be deployed live at https://maxly-react-miaartphotography.netlify.app (project ongoing)
 
-
 ![](SitePreview.png)
-
 
 ## Getting Started with Create React App
 
