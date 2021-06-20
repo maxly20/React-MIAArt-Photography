@@ -1,3 +1,5 @@
+import './Carousel.scss';
+
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
@@ -12,7 +14,7 @@ import slide_six from '../../images/home/06.jpg';
 import slide_seven from '../../images/home/07.jpg';
 import slide_eight from '../../images/home/08.jpg';
 
-const Carrousel = () => {
+const Carousel = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -105,4 +107,4 @@ const Carrousel = () => {
   );
 };
 
-export default Carrousel;
+export default Carousel;
