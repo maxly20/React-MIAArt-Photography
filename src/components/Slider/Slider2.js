@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './Slider.scss';
 
 // import slide_one from '../../images/home/01.jpg';
@@ -9,13 +10,29 @@ import './Slider.scss';
 // import slide_seven from '../../images/home/07.jpg';
 // import slide_eight from '../../images/home/08.jpg';
 
+const Slider2 = ({ images }) => {
+  const [index, setIndex] = useState(0);
 
-const Slider2 = () => {
-    return (
-        <div>
-            Slider2
-        </div>
-    )
-}
+  useEffect(() => {
+    const lastIndex = images.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, images]);
 
-export default Slider2
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 4000);
+
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+  return <div>Slider2</div>;
+};
+
+export default Slider2;
