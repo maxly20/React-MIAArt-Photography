@@ -32,7 +32,29 @@ const Slider2 = ({ images }) => {
       clearInterval(slider);
     };
   }, [index]);
-  return <div>Slider2</div>;
+  return (
+    <div className='section'>
+      <div className='section-center'>
+        {images.map((image, indexImage) => {
+          let position = 'nextSlide';
+          if (indexImage === index) {
+            position = 'activeSlide';
+          }
+          if (
+            indexImage === index - 1 ||
+            (index === 0 && indexImage === images.length - 1)
+          ) {
+            position = 'lastSlide';
+          }
+          return (
+            <article className={position} key={indexImage}>
+              <img src={image} alt='slider_image' className='banner_img' />
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Slider2;
