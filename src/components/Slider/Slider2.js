@@ -52,6 +52,12 @@ const Slider2 = ({ images }) => {
             </article>
           );
         })}
+        <p className='prev' onClick={() => setIndex(index - 1)}>
+          <i class='fas fa-chevron-left'></i>
+        </p>
+        <p className='next' onClick={() => setIndex(index + 1)}>
+          <i class='fas fa-chevron-right'></i>
+        </p>
       </div>
     </div>
   );
