@@ -34,31 +34,29 @@ const Slider2 = ({ images }) => {
   }, [index]);
   return (
     <div className='section'>
-      <div className='section-center'>
-        {images.map((image, indexImage) => {
-          let position = 'nextSlide';
-          if (indexImage === index) {
-            position = 'activeSlide';
-          }
-          if (
-            indexImage === index - 1 ||
-            (index === 0 && indexImage === images.length - 1)
-          ) {
-            position = 'lastSlide';
-          }
-          return (
-            <article className={position} key={indexImage}>
-              <img src={image} alt='slider_image' className='banner_img' />
-            </article>
-          );
-        })}
-        <p className='prev' onClick={() => setIndex(index - 1)}>
+      {images.map((image, indexImage) => {
+        let position = 'nextSlide';
+        if (indexImage === index) {
+          position = 'activeSlide';
+        }
+        if (
+          indexImage === index - 1 ||
+          (index === 0 && indexImage === images.length - 1)
+        ) {
+          position = 'lastSlide';
+        }
+        return (
+          <article className={position} key={indexImage}>
+            <img src={image} alt='slider_image' className='banner_img' />
+          </article>
+        );
+      })}
+      {/* <p className='prev' onClick={() => setIndex(index - 1)}>
           <i class='fas fa-chevron-left'></i>
         </p>
         <p className='next' onClick={() => setIndex(index + 1)}>
           <i class='fas fa-chevron-right'></i>
-        </p>
-      </div>
+        </p> */}
     </div>
   );
 };

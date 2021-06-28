@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Components
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 // Pages
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -22,7 +22,7 @@ const App = () => {
             <Route path='/gallery' exact component={Gallery} />
             <Route path='/portfolio' exact component={Portfolio} />
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         {/* </div> */}
       </div>
     </Router>
